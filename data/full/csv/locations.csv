@@ -1,0 +1,51 @@
+location_id,name,region
+LOC-NA-01,Chicago Plant,NA
+LOC-EU-01,Rotterdam DC,EU
+LOC-AP-01,Pune DC,AP
+LOC-LA-01,Monterrey Plant,LA
+LOC-ME-01,Dubai DC,ME
+LOC-NA-02,Dallas DC,NA
+LOC-EU-02,Hamburg Plant,EU
+LOC-AP-02,Chennai DC,AP
+LOC-LA-02,Sao Paulo DC,LA
+LOC-ME-02,Riyadh Plant,ME
+LOC-NA-03,Atlanta DC,NA
+LOC-EU-03,Lyon DC,EU
+LOC-AP-03,Shenzhen Plant,AP
+LOC-LA-03,Bogota DC,LA
+LOC-ME-03,Doha DC,ME
+LOC-NA-04,Toronto Plant,NA
+LOC-EU-04,Milan DC,EU
+LOC-AP-04,Penang DC,AP
+LOC-LA-04,Lima Plant,LA
+LOC-ME-04,Muscat DC,ME
+LOC-NA-05,Phoenix DC,NA
+LOC-EU-05,Poznan Plant,EU
+LOC-AP-05,Osaka DC,AP
+LOC-LA-05,Santiago DC,LA
+LOC-ME-05,Amman Plant,ME
+LOC-NA-06,Columbus DC,NA
+LOC-EU-06,Madrid DC,EU
+LOC-AP-06,Busan Plant,AP
+LOC-LA-06,Queretaro DC,LA
+LOC-ME-06,Jeddah DC,ME
+LOC-NA-07,Memphis Plant,NA
+LOC-EU-07,Antwerp DC,EU
+LOC-AP-07,Jakarta DC,AP
+LOC-LA-07,Curitiba Plant,LA
+LOC-ME-07,Kuwait City DC,ME
+LOC-NA-08,Reno DC,NA
+LOC-EU-08,Dublin Plant,EU
+LOC-AP-08,Manila DC,AP
+LOC-LA-08,Medellin DC,LA
+LOC-ME-08,Manama Plant,ME
+LOC-NA-09,Denver DC,NA
+LOC-EU-09,Prague DC,EU
+LOC-AP-09,Sydney Plant,AP
+LOC-LA-09,Quito DC,LA
+LOC-ME-09,Abu Dhabi DC,ME
+LOC-NA-10,Newark Plant,NA
+LOC-EU-10,Vienna DC,EU
+LOC-AP-10,Hanoi DC,AP
+LOC-LA-10,Rosario Plant,LA
+LOC-ME-10,Dammam DC,ME

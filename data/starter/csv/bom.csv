@@ -1,0 +1,7 @@
+parent_sku_id,component_sku_id,qty_per_parent,uom
+SKU-000017,SKU-000030,1,units
+SKU-000017,SKU-000029,2,units
+SKU-000027,SKU-000050,4,units
+SKU-000027,SKU-000052,1,units
+SKU-000046,SKU-000041,1,units
+SKU-000046,SKU-000032,3,units

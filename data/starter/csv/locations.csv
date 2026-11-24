@@ -1,0 +1,9 @@
+location_id,name,region
+LOC-NA-01,Chicago Plant,NA
+LOC-EU-01,Rotterdam DC,EU
+LOC-AP-01,Pune DC,AP
+LOC-LA-01,Monterrey Plant,LA
+LOC-ME-01,Dubai DC,ME
+LOC-NA-02,Dallas DC,NA
+LOC-EU-02,Hamburg Plant,EU
+LOC-AP-02,Chennai DC,AP

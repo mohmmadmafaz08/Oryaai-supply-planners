@@ -1,0 +1,6 @@
+sku_id,substitute_sku_id,approved,approved_on
+SKU-000005,SKU-000006,true,2026-01-05
+SKU-000006,SKU-000007,false,
+SKU-000016,SKU-000017,true,2026-01-05
+SKU-000039,SKU-000040,false,
+SKU-000046,SKU-000047,true,2026-01-05

@@ -1,0 +1,66 @@
+{
+  "seed": 20261022,
+  "generated_at_label": "Generated · Seed 20261022 · full scale",
+  "is_fixture": false,
+  "scale": "full",
+  "scale_config": {
+    "skus": 3000,
+    "locations": 50,
+    "suppliers": 500,
+    "targetPurchaseOrders": 10000,
+    "weeks": 52,
+    "anomaliesPerType": 10
+  },
+  "generator_command": "bun scripts/generate.ts --scale full --seed 20261022",
+  "priority_weights": {
+    "severity": 0.35,
+    "urgency": 0.25,
+    "service_impact": 0.25,
+    "supplier_risk": 0.15
+  },
+  "row_counts": {
+    "skus": 3000,
+    "locations": 50,
+    "suppliers": 500,
+    "sku_substitutes": 361,
+    "bom": 480,
+    "forecast_demand": 313872,
+    "inventory": 6036,
+    "supplier_capacity": 6000,
+    "lead_times": 6036,
+    "purchase_orders": 13634,
+    "po_events": 41673,
+    "pab_weekly": 313872,
+    "shortages": 3206,
+    "shortage_events": 3485,
+    "mitigations": 9296,
+    "production_plans": 3241,
+    "ground_truth": 48
+  },
+  "checksums": {
+    "skus.json": "3a5525658bc60bac86cfc4a4424a293d9385a7dd41c7e83e0bda98f4f7ce5081",
+    "locations.json": "92969aa7f6c8b9dad1055903d43691b95dedc13f99564dd0b0037c049404d223",
+    "suppliers.json": "217dbda892f28436cabf139ee9e23f4d657a02f6a105e584c4039897df556fe5",
+    "sku_substitutes.json": "7fd3d16b68067c1a59118aa851c78a0179d798eb65144088d19b545d36cb0894",
+    "bom.json": "639210b4368b675d234849a00645b554a7f6fff18ed9a6c66666d99b0e1a94fe",
+    "forecast_demand.json": "61a2c7b8585d9cbdc0a9b3f84f899eb2d68e7de27ea2920966a8e4c348b2a3ef",
+    "inventory.json": "ffcde3a0264729e4a29db274bbbb0b82257504e78702e5e95449bd4d094d11ba",
+    "supplier_capacity.json": "3228b9faaa0e96d8bab5afab77da3e408a89b42893315bba7756142059ae16a0",
+    "lead_times.json": "73389c396b017455fb4111b1aeee06d52f00f76673debcce68938d87ac291b01",
+    "purchase_orders.json": "808c5f33374dbf83b891fd8f7048a12c47e63cfdfa28e1710bf8c417a6703625",
+    "po_events.json": "b0f2453ee7ac0ac1d01160f57d883d9fde18c027c1ce1cabc6e75f20dba4cbb1",
+    "pab_weekly.json": "ca9523a8d8cfc7ca483f318eca1577a6b04deb02846ccf1272f426db8dfb086c",
+    "shortages.json": "5037d7478ff0a3d1fe7bd929488fdd063669cf6be502b923350aeb294979f091",
+    "shortage_events.json": "6312b2b256c0ac52edeb396866a02d1efabf8ff2a35930da386a248578f880dd",
+    "mitigations.json": "d6d7f929623bc808e7167b907c81bdada800ac36b51da642a1b55ce81e27a220",
+    "production_plans.json": "3afabb8332978993e1a7cd981be1450d9052e1231b70448d6db29402244f7400",
+    "ground_truth.json": "6b729f17682ce9fb0aa804562d07469cd1d83442c243587534b951b504578ec2"
+  },
+  "sources": [
+    {
+      "name": "Synthetic (this generator)",
+      "license": "MIT / original work",
+      "note": "No external rows used. Public datasets cited for schema inspiration only (see docs/SOURCE_MANIFEST.md)."
+    }
+  ]
+}

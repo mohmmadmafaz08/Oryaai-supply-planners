@@ -1,0 +1,78 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+@import "./styles/tokens.css";
+
+@custom-variant dark (&:is(.dark *));
+
+/* Oryva design system: tokens in styles/tokens.css, mapped onto shadcn semantic names below. */
+@theme inline {
+  --radius-sm: 8px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+  --radius-xl: 18px;
+  --font-sans: var(--font-sans);
+  --font-mono: var(--font-mono);
+  --font-display: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --color-background: var(--bg-canvas);
+  --color-foreground: var(--text-primary);
+  --color-card: var(--bg-surface);
+  --color-card-foreground: var(--text-primary);
+  --color-popover: var(--bg-surface);
+  --color-popover-foreground: var(--text-primary);
+  --color-primary: var(--accent);
+  --color-primary-foreground: var(--accent-fg);
+  --color-secondary: var(--bg-muted);
+  --color-secondary-foreground: var(--text-primary);
+  --color-muted: var(--bg-muted);
+  --color-muted-foreground: var(--text-muted);
+  --color-accent: var(--bg-hover);
+  --color-accent-foreground: var(--text-primary);
+  --color-destructive: var(--status-critical);
+  --color-destructive-foreground: var(--accent-fg);
+  --color-border: var(--border-default);
+  --color-input: var(--border-default);
+  --color-ring: var(--accent);
+  --color-signal: var(--accent);
+  --color-ok: var(--status-ok);
+  --color-warn: var(--status-warning);
+  --color-crit: var(--status-critical);
+  --color-ink: var(--ink);
+  --color-ink-foreground: var(--ink-fg);
+  --color-brand: var(--brand-from);
+  --color-brand-2: var(--brand-to);
+}
+
+:root {
+  --grid-line: color-mix(in oklab, var(--text-primary) 6%, transparent);
+  --gradient-hero: none;
+}
+
+@layer base {
+  * { border-color: var(--border-default); }
+  html, body {
+    font-family: var(--font-sans);
+    font-size: 15px;
+    line-height: 1.47;
+    letter-spacing: -0.01em;
+    background-color: var(--bg-canvas);
+    color: var(--text-primary);
+    -webkit-font-smoothing: antialiased;
+  }
+  h1, h2, h3, .font-display { letter-spacing: -0.035em; }
+  table { font-size: 13px; }
+  code, pre, .font-mono { font-family: var(--font-mono); }
+  *:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+}
+
+@utility bg-grid {
+  background-image:
+    linear-gradient(var(--grid-line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+@utility bg-hero { background-image: var(--gradient-hero); }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+}

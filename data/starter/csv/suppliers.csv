@@ -1,0 +1,31 @@
+supplier_id,name,reliability_score,capacity_per_week
+SUP-0001,Pioneer Manufacturing 001,0.86,1000
+SUP-0002,Vertex Precision 002,0.69,1000
+SUP-0003,Orion Manufacturing 003,0.88,1000
+SUP-0004,Vertex Components 004,0.89,1000
+SUP-0005,Vertex Works 005,0.83,1000
+SUP-0006,Summit Precision 006,0.95,1000
+SUP-0007,Orion Industries 007,0.94,1000
+SUP-0008,Keystone Industries 008,0.92,1000
+SUP-0009,Harbor Industries 009,0.97,1000
+SUP-0010,Harbor Supply Co 010,0.88,1000
+SUP-0011,Crest Precision 011,0.73,1000
+SUP-0012,Meridian Supply Co 012,0.64,1000
+SUP-0013,Atlas Works 013,0.94,1000
+SUP-0014,Vertex Manufacturing 014,0.84,1000
+SUP-0015,Atlas Supply Co 015,0.9,1000
+SUP-0016,Crest Supply Co 016,0.76,1000
+SUP-0017,Atlas Components 017,0.99,1000
+SUP-0018,Atlas Industries 018,0.77,1000
+SUP-0019,Orion Supply Co 019,0.96,1000
+SUP-0020,Delta Works 020,0.82,1000
+SUP-0021,Nordic Supply Co 021,0.66,1000
+SUP-0022,Delta Precision 022,0.8,1000
+SUP-0023,Orion Manufacturing 023,0.96,1000
+SUP-0024,Pioneer Works 024,0.9,1000
+SUP-0025,Keystone Supply Co 025,0.87,1000
+SUP-0026,Nordic Industries 026,0.87,1000
+SUP-0027,Harbor Industries 027,0.86,1000
+SUP-0028,Harbor Works 028,0.98,1000
+SUP-0029,Atlas Supply Co 029,0.95,1000
+SUP-0030,Summit Works 030,0.97,1000

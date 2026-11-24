@@ -1,0 +1,501 @@
+supplier_id,name,reliability_score,capacity_per_week
+SUP-0001,Pioneer Manufacturing 001,0.86,1039
+SUP-0002,Vertex Precision 002,0.69,1000
+SUP-0003,Orion Manufacturing 003,0.88,1000
+SUP-0004,Vertex Components 004,0.89,1850
+SUP-0005,Vertex Works 005,0.83,1457
+SUP-0006,Summit Precision 006,0.95,1477
+SUP-0007,Orion Industries 007,0.94,1000
+SUP-0008,Keystone Industries 008,0.92,1637
+SUP-0009,Harbor Industries 009,0.97,1000
+SUP-0010,Harbor Supply Co 010,0.88,1750
+SUP-0011,Crest Precision 011,0.73,1000
+SUP-0012,Meridian Supply Co 012,0.64,1037
+SUP-0013,Atlas Works 013,0.94,1000
+SUP-0014,Vertex Manufacturing 014,0.84,1000
+SUP-0015,Atlas Supply Co 015,0.9,1502
+SUP-0016,Crest Supply Co 016,0.76,1000
+SUP-0017,Atlas Components 017,0.99,1087
+SUP-0018,Atlas Industries 018,0.77,1283
+SUP-0019,Orion Supply Co 019,0.96,1422
+SUP-0020,Delta Works 020,0.82,2029
+SUP-0021,Nordic Supply Co 021,0.66,1000
+SUP-0022,Delta Precision 022,0.8,1000
+SUP-0023,Orion Manufacturing 023,0.96,1000
+SUP-0024,Pioneer Works 024,0.9,1621
+SUP-0025,Keystone Supply Co 025,0.87,1901
+SUP-0026,Nordic Industries 026,0.87,1867
+SUP-0027,Harbor Industries 027,0.86,1540
+SUP-0028,Harbor Works 028,0.98,1745
+SUP-0029,Atlas Supply Co 029,0.95,1396
+SUP-0030,Summit Works 030,0.97,2111
+SUP-0031,Crest Manufacturing 031,0.76,1000
+SUP-0032,Apex Manufacturing 032,0.88,1781
+SUP-0033,Orion Industries 033,0.95,1515
+SUP-0034,Orion Industries 034,0.73,1000
+SUP-0035,Delta Components 035,0.86,1000
+SUP-0036,Crest Manufacturing 036,0.85,1403
+SUP-0037,Nordic Supply Co 037,0.9,1268
+SUP-0038,Nordic Precision 038,0.97,1812
+SUP-0039,Orion Precision 039,0.83,1000
+SUP-0040,Apex Works 040,0.75,1000
+SUP-0041,Atlas Works 041,0.75,1000
+SUP-0042,Crest Supply Co 042,0.85,1000
+SUP-0043,Atlas Supply Co 043,0.84,1057
+SUP-0044,Orion Components 044,0.95,1729
+SUP-0045,Delta Manufacturing 045,0.95,1394
+SUP-0046,Apex Components 046,0.63,1000
+SUP-0047,Summit Works 047,0.92,1441
+SUP-0048,Atlas Works 048,0.83,2200
+SUP-0049,Harbor Industries 049,0.78,1000
+SUP-0050,Orion Precision 050,0.78,1000
+SUP-0051,Delta Components 051,0.89,1365
+SUP-0052,Summit Works 052,0.87,1000
+SUP-0053,Apex Supply Co 053,0.85,1458
+SUP-0054,Crest Works 054,0.87,1060
+SUP-0055,Summit Industries 055,0.95,1458
+SUP-0056,Vertex Precision 056,0.93,1457
+SUP-0057,Pioneer Industries 057,0.89,1537
+SUP-0058,Harbor Precision 058,0.86,1596
+SUP-0059,Meridian Manufacturing 059,0.91,1386
+SUP-0060,Summit Supply Co 060,0.93,1596
+SUP-0061,Summit Works 061,0.87,1000
+SUP-0062,Meridian Industries 062,0.89,1000
+SUP-0063,Delta Works 063,0.97,1005
+SUP-0064,Summit Works 064,0.94,1966
+SUP-0065,Nordic Precision 065,0.92,1071
+SUP-0066,Harbor Precision 066,0.97,1458
+SUP-0067,Atlas Industries 067,0.98,1490
+SUP-0068,Crest Precision 068,0.82,1000
+SUP-0069,Delta Supply Co 069,0.89,1000
+SUP-0070,Delta Industries 070,0.98,1162
+SUP-0071,Summit Supply Co 071,0.95,1210
+SUP-0072,Harbor Supply Co 072,0.75,1000
+SUP-0073,Delta Industries 073,0.74,1000
+SUP-0074,Apex Supply Co 074,0.84,1000
+SUP-0075,Orion Industries 075,0.91,2051
+SUP-0076,Atlas Supply Co 076,0.95,1000
+SUP-0077,Apex Supply Co 077,0.91,1500
+SUP-0078,Orion Components 078,0.84,1614
+SUP-0079,Atlas Precision 079,0.89,1000
+SUP-0080,Keystone Supply Co 080,0.79,1000
+SUP-0081,Summit Components 081,0.87,2109
+SUP-0082,Delta Components 082,0.93,1036
+SUP-0083,Vertex Manufacturing 083,0.86,1000
+SUP-0084,Delta Precision 084,0.91,1000
+SUP-0085,Apex Manufacturing 085,0.71,1000
+SUP-0086,Apex Works 086,0.7,1000
+SUP-0087,Vertex Components 087,0.98,2156
+SUP-0088,Atlas Supply Co 088,0.86,1901
+SUP-0089,Apex Precision 089,0.94,1723
+SUP-0090,Pioneer Industries 090,0.91,1089
+SUP-0091,Pioneer Manufacturing 091,0.87,1366
+SUP-0092,Apex Works 092,0.71,1000
+SUP-0093,Orion Components 093,0.85,1000
+SUP-0094,Keystone Manufacturing 094,0.88,1000
+SUP-0095,Summit Precision 095,0.83,1643
+SUP-0096,Atlas Industries 096,0.85,1000
+SUP-0097,Harbor Precision 097,0.95,1246
+SUP-0098,Nordic Components 098,0.91,1680
+SUP-0099,Crest Works 099,0.9,1000
+SUP-0100,Orion Precision 100,0.98,1185
+SUP-0101,Meridian Precision 101,0.83,1303
+SUP-0102,Harbor Supply Co 102,0.88,1000
+SUP-0103,Orion Manufacturing 103,0.83,1000
+SUP-0104,Orion Precision 104,0.89,1411
+SUP-0105,Harbor Industries 105,0.9,1073
+SUP-0106,Pioneer Works 106,0.85,1114
+SUP-0107,Keystone Manufacturing 107,0.97,1000
+SUP-0108,Atlas Components 108,0.98,1513
+SUP-0109,Harbor Works 109,0.97,1872
+SUP-0110,Atlas Supply Co 110,0.99,2329
+SUP-0111,Atlas Industries 111,0.72,1000
+SUP-0112,Orion Precision 112,0.94,2065
+SUP-0113,Meridian Works 113,0.96,1212
+SUP-0114,Apex Precision 114,0.88,1000
+SUP-0115,Vertex Industries 115,0.97,1410
+SUP-0116,Nordic Manufacturing 116,0.85,1056
+SUP-0117,Delta Manufacturing 117,0.94,1101
+SUP-0118,Keystone Precision 118,0.98,1000
+SUP-0119,Atlas Works 119,0.92,1997
+SUP-0120,Orion Supply Co 120,0.82,1135
+SUP-0121,Harbor Supply Co 121,0.92,1305
+SUP-0122,Harbor Supply Co 122,0.91,1195
+SUP-0123,Keystone Components 123,0.84,1000
+SUP-0124,Vertex Works 124,0.95,1000
+SUP-0125,Atlas Components 125,0.9,1857
+SUP-0126,Summit Manufacturing 126,0.98,1000
+SUP-0127,Harbor Industries 127,0.86,1292
+SUP-0128,Orion Manufacturing 128,0.75,1144
+SUP-0129,Delta Industries 129,0.83,1970
+SUP-0130,Pioneer Works 130,0.84,1000
+SUP-0131,Orion Components 131,0.89,1445
+SUP-0132,Summit Industries 132,0.94,2091
+SUP-0133,Orion Works 133,0.92,1081
+SUP-0134,Pioneer Precision 134,0.72,1000
+SUP-0135,Orion Industries 135,0.72,1000
+SUP-0136,Summit Industries 136,0.98,1000
+SUP-0137,Meridian Supply Co 137,0.89,1443
+SUP-0138,Keystone Supply Co 138,0.96,2125
+SUP-0139,Nordic Components 139,0.96,1794
+SUP-0140,Orion Precision 140,0.78,1000
+SUP-0141,Pioneer Supply Co 141,0.78,1000
+SUP-0142,Meridian Works 142,0.91,2563
+SUP-0143,Pioneer Manufacturing 143,0.85,1881
+SUP-0144,Orion Precision 144,0.99,1644
+SUP-0145,Delta Precision 145,0.99,1000
+SUP-0146,Summit Industries 146,0.93,1000
+SUP-0147,Delta Industries 147,0.91,1000
+SUP-0148,Keystone Works 148,0.76,1000
+SUP-0149,Crest Industries 149,0.94,1000
+SUP-0150,Orion Industries 150,0.89,1903
+SUP-0151,Orion Supply Co 151,0.89,1806
+SUP-0152,Keystone Industries 152,0.94,1000
+SUP-0153,Atlas Precision 153,0.97,1494
+SUP-0154,Summit Supply Co 154,0.94,1000
+SUP-0155,Delta Components 155,0.97,1000
+SUP-0156,Delta Precision 156,0.97,1576
+SUP-0157,Orion Precision 157,0.94,1000
+SUP-0158,Nordic Manufacturing 158,0.93,1000
+SUP-0159,Pioneer Precision 159,0.92,1000
+SUP-0160,Meridian Manufacturing 160,0.89,1769
+SUP-0161,Delta Supply Co 161,0.89,1556
+SUP-0162,Crest Manufacturing 162,0.85,2087
+SUP-0163,Atlas Supply Co 163,0.95,2213
+SUP-0164,Summit Manufacturing 164,0.79,1035
+SUP-0165,Harbor Works 165,0.83,1335
+SUP-0166,Nordic Precision 166,0.94,1208
+SUP-0167,Harbor Supply Co 167,0.68,1000
+SUP-0168,Orion Components 168,0.96,2248
+SUP-0169,Summit Supply Co 169,0.83,1259
+SUP-0170,Keystone Industries 170,0.84,2363
+SUP-0171,Pioneer Components 171,0.77,1000
+SUP-0172,Crest Components 172,0.78,1000
+SUP-0173,Nordic Components 173,0.97,1727
+SUP-0174,Keystone Components 174,0.99,1494
+SUP-0175,Delta Supply Co 175,0.94,1000
+SUP-0176,Harbor Supply Co 176,0.9,1162
+SUP-0177,Vertex Industries 177,0.89,1732
+SUP-0178,Summit Manufacturing 178,0.92,1141
+SUP-0179,Atlas Precision 179,0.84,1000
+SUP-0180,Pioneer Components 180,0.97,1073
+SUP-0181,Apex Components 181,0.97,2267
+SUP-0182,Delta Works 182,0.92,1324
+SUP-0183,Crest Manufacturing 183,0.82,1000
+SUP-0184,Vertex Industries 184,0.85,1377
+SUP-0185,Summit Precision 185,0.84,2006
+SUP-0186,Nordic Components 186,0.83,1000
+SUP-0187,Crest Components 187,0.9,1494
+SUP-0188,Pioneer Industries 188,0.84,1008
+SUP-0189,Atlas Industries 189,0.85,1823
+SUP-0190,Harbor Manufacturing 190,0.97,1764
+SUP-0191,Keystone Industries 191,0.83,1000
+SUP-0192,Harbor Manufacturing 192,0.98,1244
+SUP-0193,Orion Works 193,0.91,2133
+SUP-0194,Meridian Supply Co 194,0.98,1792
+SUP-0195,Meridian Industries 195,0.91,1206
+SUP-0196,Delta Industries 196,0.84,1000
+SUP-0197,Nordic Industries 197,0.93,1000
+SUP-0198,Keystone Manufacturing 198,0.9,1000
+SUP-0199,Apex Components 199,0.83,1259
+SUP-0200,Crest Works 200,0.91,1149
+SUP-0201,Keystone Works 201,0.88,1000
+SUP-0202,Nordic Works 202,0.82,1000
+SUP-0203,Nordic Supply Co 203,0.9,1507
+SUP-0204,Pioneer Industries 204,0.88,2135
+SUP-0205,Atlas Manufacturing 205,0.99,1177
+SUP-0206,Pioneer Components 206,0.94,2096
+SUP-0207,Summit Manufacturing 207,0.87,1865
+SUP-0208,Summit Industries 208,0.93,1822
+SUP-0209,Crest Manufacturing 209,0.88,1773
+SUP-0210,Summit Industries 210,0.85,2628
+SUP-0211,Nordic Industries 211,0.96,1347
+SUP-0212,Apex Precision 212,0.9,1000
+SUP-0213,Summit Supply Co 213,0.69,1000
+SUP-0214,Delta Components 214,0.87,1000
+SUP-0215,Orion Components 215,0.89,1000
+SUP-0216,Pioneer Industries 216,0.98,1000
+SUP-0217,Atlas Precision 217,0.85,1808
+SUP-0218,Delta Components 218,0.86,1000
+SUP-0219,Atlas Manufacturing 219,0.88,1169
+SUP-0220,Delta Works 220,0.94,1113
+SUP-0221,Vertex Supply Co 221,0.84,1846
+SUP-0222,Orion Works 222,0.65,1000
+SUP-0223,Apex Precision 223,0.67,1000
+SUP-0224,Delta Supply Co 224,0.84,1116
+SUP-0225,Orion Works 225,0.93,1102
+SUP-0226,Harbor Works 226,0.86,1421
+SUP-0227,Apex Works 227,0.88,1000
+SUP-0228,Crest Precision 228,0.83,1390
+SUP-0229,Vertex Supply Co 229,0.93,1000
+SUP-0230,Delta Manufacturing 230,0.96,1288
+SUP-0231,Atlas Components 231,0.77,1000
+SUP-0232,Harbor Supply Co 232,0.93,1530
+SUP-0233,Delta Supply Co 233,0.84,1437
+SUP-0234,Summit Precision 234,0.98,1625
+SUP-0235,Meridian Precision 235,0.9,1307
+SUP-0236,Keystone Supply Co 236,0.97,1535
+SUP-0237,Summit Precision 237,0.85,1000
+SUP-0238,Apex Works 238,0.69,1000
+SUP-0239,Crest Components 239,0.92,1280
+SUP-0240,Apex Works 240,0.9,1212
+SUP-0241,Pioneer Industries 241,0.99,1013
+SUP-0242,Atlas Supply Co 242,0.94,1000
+SUP-0243,Orion Supply Co 243,0.78,1000
+SUP-0244,Vertex Supply Co 244,0.84,1000
+SUP-0245,Apex Manufacturing 245,0.91,1137
+SUP-0246,Crest Works 246,0.93,1933
+SUP-0247,Summit Precision 247,0.83,1000
+SUP-0248,Apex Industries 248,0.91,1365
+SUP-0249,Meridian Components 249,0.94,1454
+SUP-0250,Nordic Industries 250,0.95,1310
+SUP-0251,Nordic Precision 251,0.75,1000
+SUP-0252,Keystone Components 252,0.92,1339
+SUP-0253,Vertex Precision 253,0.97,1000
+SUP-0254,Nordic Precision 254,0.92,1627
+SUP-0255,Pioneer Manufacturing 255,0.95,1414
+SUP-0256,Atlas Industries 256,0.67,1000
+SUP-0257,Harbor Precision 257,0.98,1080
+SUP-0258,Vertex Precision 258,0.63,1060
+SUP-0259,Apex Components 259,0.9,1006
+SUP-0260,Delta Components 260,0.94,1000
+SUP-0261,Delta Works 261,0.8,1471
+SUP-0262,Atlas Components 262,0.87,2225
+SUP-0263,Apex Works 263,0.68,1000
+SUP-0264,Meridian Industries 264,0.93,1000
+SUP-0265,Nordic Precision 265,0.8,1000
+SUP-0266,Apex Components 266,0.94,1867
+SUP-0267,Summit Supply Co 267,0.88,1275
+SUP-0268,Harbor Precision 268,0.85,2026
+SUP-0269,Keystone Industries 269,0.89,1369
+SUP-0270,Summit Components 270,0.97,1000
+SUP-0271,Harbor Manufacturing 271,0.85,1402
+SUP-0272,Vertex Components 272,0.73,1000
+SUP-0273,Keystone Precision 273,0.84,1728
+SUP-0274,Meridian Components 274,0.68,1000
+SUP-0275,Pioneer Components 275,0.89,1376
+SUP-0276,Pioneer Manufacturing 276,0.95,1000
+SUP-0277,Summit Supply Co 277,0.83,1750
+SUP-0278,Pioneer Industries 278,0.96,1000
+SUP-0279,Harbor Manufacturing 279,0.86,1179
+SUP-0280,Nordic Industries 280,0.64,1000
+SUP-0281,Harbor Components 281,0.83,2337
+SUP-0282,Delta Precision 282,0.85,1637
+SUP-0283,Apex Precision 283,0.71,1000
+SUP-0284,Summit Works 284,0.85,1370
+SUP-0285,Atlas Supply Co 285,0.89,1279
+SUP-0286,Vertex Precision 286,0.93,1358
+SUP-0287,Harbor Supply Co 287,0.88,2242
+SUP-0288,Atlas Components 288,0.83,1676
+SUP-0289,Apex Components 289,0.91,1416
+SUP-0290,Summit Components 290,0.96,1000
+SUP-0291,Atlas Supply Co 291,0.73,1000
+SUP-0292,Orion Manufacturing 292,0.82,2104
+SUP-0293,Apex Industries 293,0.98,1000
+SUP-0294,Summit Supply Co 294,0.82,1000
+SUP-0295,Harbor Supply Co 295,0.99,1199
+SUP-0296,Harbor Precision 296,0.92,1000
+SUP-0297,Summit Industries 297,0.9,1310
+SUP-0298,Pioneer Manufacturing 298,0.94,1378
+SUP-0299,Keystone Works 299,0.97,1000
+SUP-0300,Atlas Components 300,0.87,1308
+SUP-0301,Delta Supply Co 301,0.84,1389
+SUP-0302,Vertex Works 302,0.86,1726
+SUP-0303,Summit Supply Co 303,0.92,1860
+SUP-0304,Vertex Components 304,0.87,1509
+SUP-0305,Nordic Industries 305,0.78,1021
+SUP-0306,Harbor Precision 306,0.97,1000
+SUP-0307,Pioneer Industries 307,0.9,1317
+SUP-0308,Keystone Components 308,0.83,1000
+SUP-0309,Nordic Industries 309,0.98,1000
+SUP-0310,Pioneer Precision 310,0.9,2095
+SUP-0311,Summit Industries 311,0.97,1000
+SUP-0312,Summit Precision 312,0.63,1000
+SUP-0313,Delta Manufacturing 313,0.86,1346
+SUP-0314,Keystone Precision 314,0.85,2050
+SUP-0315,Meridian Works 315,0.99,1000
+SUP-0316,Orion Components 316,0.8,1000
+SUP-0317,Atlas Works 317,0.71,1000
+SUP-0318,Apex Precision 318,0.89,1000
+SUP-0319,Pioneer Components 319,0.96,1000
+SUP-0320,Meridian Components 320,0.84,2012
+SUP-0321,Keystone Manufacturing 321,0.88,1114
+SUP-0322,Delta Components 322,0.82,1200
+SUP-0323,Harbor Precision 323,0.92,1333
+SUP-0324,Nordic Supply Co 324,0.95,1316
+SUP-0325,Keystone Works 325,0.84,1967
+SUP-0326,Crest Manufacturing 326,0.92,1749
+SUP-0327,Orion Precision 327,0.93,1226
+SUP-0328,Nordic Industries 328,0.95,2047
+SUP-0329,Vertex Components 329,0.68,1000
+SUP-0330,Nordic Supply Co 330,0.92,2354
+SUP-0331,Orion Components 331,0.98,1178
+SUP-0332,Orion Precision 332,0.97,1173
+SUP-0333,Harbor Components 333,0.93,1949
+SUP-0334,Summit Supply Co 334,0.73,1000
+SUP-0335,Atlas Works 335,0.9,1169
+SUP-0336,Delta Works 336,0.98,1961
+SUP-0337,Crest Manufacturing 337,0.9,1183
+SUP-0338,Summit Supply Co 338,0.95,1552
+SUP-0339,Vertex Precision 339,0.95,1000
+SUP-0340,Keystone Manufacturing 340,0.83,1000
+SUP-0341,Pioneer Supply Co 341,0.97,1149
+SUP-0342,Meridian Works 342,0.75,1063
+SUP-0343,Pioneer Industries 343,0.91,1569
+SUP-0344,Summit Works 344,0.98,1024
+SUP-0345,Harbor Precision 345,0.64,1000
+SUP-0346,Nordic Industries 346,0.83,1487
+SUP-0347,Pioneer Supply Co 347,0.97,1118
+SUP-0348,Atlas Components 348,0.84,1276
+SUP-0349,Keystone Precision 349,0.91,2264
+SUP-0350,Delta Supply Co 350,0.96,1000
+SUP-0351,Crest Manufacturing 351,0.98,1411
+SUP-0352,Atlas Precision 352,0.88,1332
+SUP-0353,Keystone Supply Co 353,0.71,1000
+SUP-0354,Keystone Manufacturing 354,0.76,1000
+SUP-0355,Crest Precision 355,0.82,1373
+SUP-0356,Orion Works 356,0.88,2098
+SUP-0357,Delta Components 357,0.92,1000
+SUP-0358,Summit Works 358,0.85,1357
+SUP-0359,Meridian Works 359,0.98,1130
+SUP-0360,Harbor Industries 360,0.81,1000
+SUP-0361,Orion Precision 361,0.87,1707
+SUP-0362,Meridian Works 362,0.88,1000
+SUP-0363,Atlas Industries 363,0.98,1002
+SUP-0364,Keystone Works 364,0.87,3349
+SUP-0365,Orion Manufacturing 365,0.85,1000
+SUP-0366,Summit Industries 366,0.93,1488
+SUP-0367,Vertex Manufacturing 367,0.97,1642
+SUP-0368,Orion Precision 368,0.97,1986
+SUP-0369,Apex Components 369,0.93,1118
+SUP-0370,Vertex Works 370,0.91,2015
+SUP-0371,Vertex Works 371,0.86,1960
+SUP-0372,Vertex Components 372,0.99,2114
+SUP-0373,Nordic Industries 373,0.87,1202
+SUP-0374,Apex Components 374,0.91,1000
+SUP-0375,Apex Manufacturing 375,0.83,1163
+SUP-0376,Harbor Manufacturing 376,0.72,1000
+SUP-0377,Keystone Industries 377,0.88,1767
+SUP-0378,Pioneer Manufacturing 378,0.95,2404
+SUP-0379,Atlas Works 379,0.85,1771
+SUP-0380,Nordic Works 380,0.83,1233
+SUP-0381,Keystone Works 381,0.86,1346
+SUP-0382,Apex Precision 382,0.89,3019
+SUP-0383,Crest Precision 383,0.99,2324
+SUP-0384,Vertex Precision 384,0.85,1245
+SUP-0385,Harbor Works 385,0.82,1034
+SUP-0386,Harbor Industries 386,0.86,2154
+SUP-0387,Summit Components 387,0.82,1000
+SUP-0388,Summit Supply Co 388,0.84,1175
+SUP-0389,Vertex Industries 389,0.87,2279
+SUP-0390,Nordic Industries 390,0.92,1202
+SUP-0391,Meridian Works 391,0.84,1000
+SUP-0392,Keystone Supply Co 392,0.88,1000
+SUP-0393,Crest Precision 393,0.98,1230
+SUP-0394,Orion Industries 394,0.63,1000
+SUP-0395,Orion Components 395,0.95,2603
+SUP-0396,Crest Components 396,0.77,1236
+SUP-0397,Meridian Precision 397,0.87,1453
+SUP-0398,Orion Manufacturing 398,0.82,1579
+SUP-0399,Delta Manufacturing 399,0.95,1058
+SUP-0400,Nordic Components 400,0.87,1882
+SUP-0401,Delta Works 401,0.92,1455
+SUP-0402,Atlas Works 402,0.9,1000
+SUP-0403,Keystone Works 403,0.95,1000
+SUP-0404,Summit Industries 404,0.96,1121
+SUP-0405,Crest Manufacturing 405,0.91,1482
+SUP-0406,Apex Supply Co 406,0.87,1000
+SUP-0407,Atlas Supply Co 407,0.86,1450
+SUP-0408,Vertex Components 408,0.83,2036
+SUP-0409,Orion Components 409,0.92,1000
+SUP-0410,Pioneer Works 410,0.96,1000
+SUP-0411,Vertex Precision 411,0.85,2732
+SUP-0412,Pioneer Supply Co 412,0.97,1439
+SUP-0413,Pioneer Manufacturing 413,0.7,1216
+SUP-0414,Summit Precision 414,0.83,1428
+SUP-0415,Keystone Industries 415,0.98,1404
+SUP-0416,Nordic Industries 416,0.99,2688
+SUP-0417,Orion Industries 417,0.83,1601
+SUP-0418,Nordic Supply Co 418,0.93,1293
+SUP-0419,Pioneer Supply Co 419,0.85,1289
+SUP-0420,Orion Precision 420,0.97,2018
+SUP-0421,Harbor Manufacturing 421,0.85,1000
+SUP-0422,Apex Components 422,0.9,1999
+SUP-0423,Orion Works 423,0.85,1787
+SUP-0424,Atlas Precision 424,0.91,2033
+SUP-0425,Meridian Works 425,0.94,3416
+SUP-0426,Pioneer Components 426,0.85,2675
+SUP-0427,Crest Precision 427,0.96,1683
+SUP-0428,Orion Components 428,0.89,1000
+SUP-0429,Summit Components 429,0.96,1459
+SUP-0430,Harbor Works 430,0.71,1000
+SUP-0431,Apex Supply Co 431,0.9,1752
+SUP-0432,Meridian Manufacturing 432,0.88,1227
+SUP-0433,Meridian Precision 433,0.97,1209
+SUP-0434,Meridian Manufacturing 434,0.81,1000
+SUP-0435,Atlas Precision 435,0.89,1104
+SUP-0436,Vertex Supply Co 436,0.73,1000
+SUP-0437,Atlas Supply Co 437,0.88,1329
+SUP-0438,Pioneer Components 438,0.88,1132
+SUP-0439,Crest Manufacturing 439,0.82,1306
+SUP-0440,Delta Works 440,0.84,1709
+SUP-0441,Summit Supply Co 441,0.96,1506
+SUP-0442,Atlas Works 442,0.85,2015
+SUP-0443,Keystone Precision 443,0.82,1725
+SUP-0444,Vertex Components 444,0.89,2322
+SUP-0445,Delta Components 445,0.64,1000
+SUP-0446,Delta Industries 446,0.85,1000
+SUP-0447,Pioneer Supply Co 447,0.87,1034
+SUP-0448,Meridian Precision 448,0.86,1823
+SUP-0449,Pioneer Supply Co 449,0.93,1680
+SUP-0450,Pioneer Works 450,0.83,2399
+SUP-0451,Keystone Precision 451,0.87,1691
+SUP-0452,Summit Components 452,0.97,1235
+SUP-0453,Harbor Supply Co 453,0.94,1444
+SUP-0454,Atlas Works 454,0.88,1082
+SUP-0455,Keystone Works 455,0.92,1359
+SUP-0456,Delta Precision 456,0.93,1238
+SUP-0457,Harbor Works 457,0.85,1541
+SUP-0458,Nordic Industries 458,0.98,1000
+SUP-0459,Nordic Manufacturing 459,0.85,1511
+SUP-0460,Keystone Components 460,0.88,1049
+SUP-0461,Delta Precision 461,0.84,1630
+SUP-0462,Apex Supply Co 462,0.75,1000
+SUP-0463,Vertex Manufacturing 463,0.94,1768
+SUP-0464,Summit Works 464,0.87,1474
+SUP-0465,Harbor Components 465,0.85,1000
+SUP-0466,Delta Manufacturing 466,0.92,1771
+SUP-0467,Delta Works 467,0.88,1000
+SUP-0468,Keystone Industries 468,0.63,1000
+SUP-0469,Atlas Precision 469,0.85,1366
+SUP-0470,Atlas Manufacturing 470,0.97,1450
+SUP-0471,Meridian Works 471,0.62,1000
+SUP-0472,Vertex Manufacturing 472,0.98,1000
+SUP-0473,Orion Works 473,0.88,2781
+SUP-0474,Atlas Precision 474,0.96,1162
+SUP-0475,Apex Works 475,0.62,1180
+SUP-0476,Keystone Supply Co 476,0.98,1000
+SUP-0477,Keystone Components 477,0.9,2030
+SUP-0478,Delta Supply Co 478,0.96,1000
+SUP-0479,Vertex Components 479,0.96,1254
+SUP-0480,Nordic Manufacturing 480,0.84,1000
+SUP-0481,Crest Manufacturing 481,0.8,1000
+SUP-0482,Crest Works 482,0.87,2125
+SUP-0483,Meridian Components 483,0.93,1000
+SUP-0484,Crest Industries 484,0.85,1000
+SUP-0485,Pioneer Manufacturing 485,0.82,1048
+SUP-0486,Keystone Precision 486,0.81,1000
+SUP-0487,Harbor Supply Co 487,0.87,1154
+SUP-0488,Nordic Supply Co 488,0.86,1213
+SUP-0489,Summit Precision 489,0.94,1473
+SUP-0490,Pioneer Precision 490,0.94,1000
+SUP-0491,Nordic Manufacturing 491,0.7,1000
+SUP-0492,Summit Manufacturing 492,0.94,1255
+SUP-0493,Summit Works 493,0.98,1987
+SUP-0494,Delta Industries 494,0.92,1000
+SUP-0495,Pioneer Works 495,0.94,1536
+SUP-0496,Meridian Manufacturing 496,0.91,2283
+SUP-0497,Vertex Components 497,0.95,1757
+SUP-0498,Delta Works 498,0.94,1390
+SUP-0499,Apex Manufacturing 499,0.71,1000
+SUP-0500,Atlas Components 500,0.87,2157

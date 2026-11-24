@@ -1,0 +1,95 @@
+{
+  "checks": [
+    {
+      "name": "PK Uniqueness",
+      "status": "PASS",
+      "rows_checked": 29686,
+      "details": "All primary keys across SKUs, locations, suppliers, shortages, mitigations, and POs are unique.",
+      "group": "CLEAN_BASELINE"
+    },
+    {
+      "name": "FK Integrity",
+      "status": "PASS",
+      "rows_checked": 340008,
+      "details": "All SKU, location, supplier, shortage, and purchase order foreign keys resolve cleanly.",
+      "group": "CLEAN_BASELINE"
+    },
+    {
+      "name": "Allowed Enums",
+      "status": "PASS",
+      "rows_checked": 26136,
+      "details": "All cause codes, statuses, and mitigation types belong to permitted schema enums.",
+      "group": "CLEAN_BASELINE"
+    },
+    {
+      "name": "Date Ordering",
+      "status": "PASS",
+      "rows_checked": 13634,
+      "details": "All purchase orders satisfy order_date <= promised_date and receipt >= order_date.",
+      "group": "CLEAN_BASELINE"
+    },
+    {
+      "name": "Lifecycle Transitions",
+      "status": "PASS",
+      "rows_checked": 45158,
+      "details": "All PO and shortage status events follow valid state-machine transitions.",
+      "group": "CLEAN_BASELINE"
+    },
+    {
+      "name": "ID Patterns",
+      "status": "PASS",
+      "rows_checked": 29686,
+      "details": "All entity identifiers match required canonical regex formats.",
+      "group": "CLEAN_BASELINE"
+    },
+    {
+      "name": "Shortage Lead-Time Basis",
+      "status": "FAIL",
+      "rows_checked": 3206,
+      "details": "10 shortages lack a positive lead-time basis.",
+      "group": "CLEAN_BASELINE"
+    },
+    {
+      "name": "PAB Weekly Reconciliation Check",
+      "status": "FAIL",
+      "rows_checked": 313872,
+      "details": "318 row failed closing balance arithmetic (SKU-000148@LOC-ME-07:W31 (delta -1004), SKU-000148@LOC-ME-07:W32 (delta -1004), SKU-000148@LOC-ME-07:W33 (delta -1004), SKU-000148@LOC-ME-07:W34 (delta -1004), SKU-000148@LOC-ME-07:W35 (delta -1004), SKU-000148@LOC-ME-07:W36 (delta -1004), SKU-000148@LOC-ME-07:W37 (delta -1004), SKU-000148@LOC-ME-07:W38 (delta -1004), SKU-000148@LOC-ME-07:W39 (delta -1004), SKU-000148@LOC-ME-07:W40 (delta -1004), SKU-000148@LOC-ME-07:W41 (delta -1004), SKU-000148@LOC-ME-07:W42 (delta -1004), SKU-000148@LOC-ME-07:W43 (delta -1004), SKU-000148@LOC-ME-07:W44 (delta -1004), SKU-000148@LOC-ME-07:W45 (delta -1004), SKU-000148@LOC-ME-07:W46 (delta -1004), SKU-000148@LOC-ME-07:W47 (delta -1004), SKU-000148@LOC-ME-07:W48 (delta -1004), SKU-000148@LOC-ME-07:W49 (delta -1004), SKU-000148@LOC-ME-07:W50 (delta -1004), SKU-000148@LOC-ME-07:W51 (delta -1004), SKU-000148@LOC-ME-07:W52 (delta -1004), SKU-000284@LOC-EU-09:W03 (delta -713), SKU-000284@LOC-EU-09:W04 (delta -713), SKU-000284@LOC-EU-09:W05 (delta -713), SKU-000284@LOC-EU-09:W06 (delta -713), SKU-000284@LOC-EU-09:W07 (delta -713), SKU-000284@LOC-EU-09:W08 (delta -713), SKU-000284@LOC-EU-09:W09 (delta -713), SKU-000284@LOC-EU-09:W10 (delta -713), SKU-000284@LOC-EU-09:W11 (delta -713), SKU-000284@LOC-EU-09:W12 (delta -713), SKU-000284@LOC-EU-09:W13 (delta -713), SKU-000284@LOC-EU-09:W14 (delta -713), SKU-000284@LOC-EU-09:W15 (delta -713), SKU-000284@LOC-EU-09:W16 (delta -713), SKU-000284@LOC-EU-09:W17 (delta -713), SKU-000284@LOC-EU-09:W18 (delta -713), SKU-000284@LOC-EU-09:W19 (delta -713), SKU-000284@LOC-EU-09:W20 (delta -713), SKU-000284@LOC-EU-09:W21 (delta -713), SKU-000284@LOC-EU-09:W22 (delta -713), SKU-000284@LOC-EU-09:W23 (delta -713), SKU-000284@LOC-EU-09:W24 (delta -713), SKU-000284@LOC-EU-09:W25 (delta -713), SKU-000284@LOC-EU-09:W26 (delta -713), SKU-000284@LOC-EU-09:W27 (delta -713), SKU-000284@LOC-EU-09:W28 (delta -713), SKU-000284@LOC-EU-09:W29 (delta -713), SKU-000284@LOC-EU-09:W30 (delta -713), SKU-000284@LOC-EU-09:W31 (delta -713), SKU-000284@LOC-EU-09:W32 (delta -713), SKU-000284@LOC-EU-09:W33 (delta -713), SKU-000284@LOC-EU-09:W34 (delta -713), SKU-000284@LOC-EU-09:W35 (delta -713), SKU-000284@LOC-EU-09:W36 (delta -713), SKU-000284@LOC-EU-09:W37 (delta -713), SKU-000284@LOC-EU-09:W38 (delta -713), SKU-000284@LOC-EU-09:W39 (delta -713), SKU-000284@LOC-EU-09:W40 (delta -713), SKU-000284@LOC-EU-09:W41 (delta -713), SKU-000284@LOC-EU-09:W42 (delta -713), SKU-000284@LOC-EU-09:W43 (delta -713), SKU-000284@LOC-EU-09:W44 (delta -713), SKU-000284@LOC-EU-09:W45 (delta -713), SKU-000284@LOC-EU-09:W46 (delta -713), SKU-000284@LOC-EU-09:W47 (delta -713), SKU-000284@LOC-EU-09:W48 (delta -713), SKU-000284@LOC-EU-09:W49 (delta -713), SKU-000284@LOC-EU-09:W50 (delta -713), SKU-000284@LOC-EU-09:W51 (delta -713), SKU-000284@LOC-EU-09:W52 (delta -713), SKU-000450@LOC-LA-09:W05 (delta -1209), SKU-000450@LOC-LA-09:W06 (delta -1209), SKU-000450@LOC-LA-09:W07 (delta -1209), SKU-000450@LOC-LA-09:W08 (delta -1209), SKU-000450@LOC-LA-09:W09 (delta -1209), SKU-000450@LOC-LA-09:W10 (delta -1209), SKU-000450@LOC-LA-09:W11 (delta -1209), SKU-000450@LOC-LA-09:W12 (delta -1209), SKU-000450@LOC-LA-09:W13 (delta -1209), SKU-000450@LOC-LA-09:W14 (delta -1209), SKU-000450@LOC-LA-09:W15 (delta -1209), SKU-000450@LOC-LA-09:W16 (delta -1209), SKU-000450@LOC-LA-09:W17 (delta -1209), SKU-000450@LOC-LA-09:W18 (delta -1209), SKU-000450@LOC-LA-09:W19 (delta -1209), SKU-000450@LOC-LA-09:W20 (delta -1209), SKU-000450@LOC-LA-09:W21 (delta -1209), SKU-000450@LOC-LA-09:W22 (delta -1209), SKU-000450@LOC-LA-09:W23 (delta -1209), SKU-000450@LOC-LA-09:W24 (delta -1209), SKU-000450@LOC-LA-09:W25 (delta -1209), SKU-000450@LOC-LA-09:W26 (delta -1209), SKU-000450@LOC-LA-09:W27 (delta -1209), SKU-000450@LOC-LA-09:W28 (delta -1209), SKU-000450@LOC-LA-09:W29 (delta -1209), SKU-000450@LOC-LA-09:W30 (delta -1209), SKU-000450@LOC-LA-09:W31 (delta -1209), SKU-000450@LOC-LA-09:W32 (delta -1209), SKU-000450@LOC-LA-09:W33 (delta -1209), SKU-000450@LOC-LA-09:W34 (delta -1209), SKU-000450@LOC-LA-09:W35 (delta -1209), SKU-000450@LOC-LA-09:W36 (delta -1209), SKU-000450@LOC-LA-09:W37 (delta -1209), SKU-000450@LOC-LA-09:W38 (delta -1209), SKU-000450@LOC-LA-09:W39 (delta -1209), SKU-000450@LOC-LA-09:W40 (delta -1209), SKU-000450@LOC-LA-09:W41 (delta -1209), SKU-000450@LOC-LA-09:W42 (delta -1209), SKU-000450@LOC-LA-09:W43 (delta -1209), SKU-000450@LOC-LA-09:W44 (delta -1209), SKU-000450@LOC-LA-09:W45 (delta -1209), SKU-000450@LOC-LA-09:W46 (delta -1209), SKU-000450@LOC-LA-09:W47 (delta -1209), SKU-000450@LOC-LA-09:W48 (delta -1209), SKU-000450@LOC-LA-09:W49 (delta -1209), SKU-000450@LOC-LA-09:W50 (delta -1209), SKU-000450@LOC-LA-09:W51 (delta -1209), SKU-000450@LOC-LA-09:W52 (delta -1209), SKU-000783@LOC-LA-05:W34 (delta -1550), SKU-000783@LOC-LA-05:W35 (delta -1550), SKU-000783@LOC-LA-05:W36 (delta -1550), SKU-000783@LOC-LA-05:W37 (delta -1550), SKU-000783@LOC-LA-05:W38 (delta -1550), SKU-000783@LOC-LA-05:W39 (delta -1550), SKU-000783@LOC-LA-05:W40 (delta -1550), SKU-000783@LOC-LA-05:W41 (delta -1550), SKU-000783@LOC-LA-05:W42 (delta -1550), SKU-000783@LOC-LA-05:W43 (delta -1550), SKU-000783@LOC-LA-05:W44 (delta -1550), SKU-000783@LOC-LA-05:W45 (delta -1550), SKU-000783@LOC-LA-05:W46 (delta -1550), SKU-000783@LOC-LA-05:W47 (delta -1550), SKU-000783@LOC-LA-05:W48 (delta -1550), SKU-000783@LOC-LA-05:W49 (delta -1550), SKU-000783@LOC-LA-05:W50 (delta -1550), SKU-000783@LOC-LA-05:W51 (delta -1550), SKU-000783@LOC-LA-05:W52 (delta -1550), SKU-000909@LOC-LA-03:W06 (delta -682), SKU-000909@LOC-LA-03:W07 (delta -682), SKU-000909@LOC-LA-03:W08 (delta -682), SKU-000909@LOC-LA-03:W09 (delta -682), SKU-000909@LOC-LA-03:W10 (delta -682), SKU-000909@LOC-LA-03:W11 (delta -682), SKU-000909@LOC-LA-03:W12 (delta -682), SKU-000909@LOC-LA-03:W13 (delta -682), SKU-000909@LOC-LA-03:W14 (delta -682), SKU-000909@LOC-LA-03:W15 (delta -682), SKU-000909@LOC-LA-03:W16 (delta -682), SKU-000909@LOC-LA-03:W17 (delta -682), SKU-000909@LOC-LA-03:W18 (delta -682), SKU-000909@LOC-LA-03:W19 (delta -682), SKU-000909@LOC-LA-03:W20 (delta -682), SKU-000909@LOC-LA-03:W21 (delta -682), SKU-000909@LOC-LA-03:W22 (delta -682), SKU-000909@LOC-LA-03:W23 (delta -682), SKU-000909@LOC-LA-03:W24 (delta -682), SKU-000909@LOC-LA-03:W25 (delta -682), SKU-000909@LOC-LA-03:W26 (delta -682), SKU-000909@LOC-LA-03:W27 (delta -682), SKU-000909@LOC-LA-03:W28 (delta -682), SKU-000909@LOC-LA-03:W29 (delta -682), SKU-000909@LOC-LA-03:W30 (delta -682), SKU-000909@LOC-LA-03:W31 (delta -682), SKU-000909@LOC-LA-03:W32 (delta -682), SKU-000909@LOC-LA-03:W33 (delta -682), SKU-000909@LOC-LA-03:W34 (delta -682), SKU-000909@LOC-LA-03:W35 (delta -682), SKU-000909@LOC-LA-03:W36 (delta -682), SKU-000909@LOC-LA-03:W37 (delta -682), SKU-000909@LOC-LA-03:W38 (delta -682), SKU-000909@LOC-LA-03:W39 (delta -682), SKU-000909@LOC-LA-03:W40 (delta -682), SKU-000909@LOC-LA-03:W41 (delta -682), SKU-000909@LOC-LA-03:W42 (delta -682), SKU-000909@LOC-LA-03:W43 (delta -682), SKU-000909@LOC-LA-03:W44 (delta -682), SKU-000909@LOC-LA-03:W45 (delta -682), SKU-000909@LOC-LA-03:W46 (delta -682), SKU-000909@LOC-LA-03:W47 (delta -682), SKU-000909@LOC-LA-03:W48 (delta -682), SKU-000909@LOC-LA-03:W49 (delta -682), SKU-000909@LOC-LA-03:W50 (delta -682), SKU-000909@LOC-LA-03:W51 (delta -682), SKU-000909@LOC-LA-03:W52 (delta -682), SKU-001043@LOC-LA-10:W28 (delta -775), SKU-001043@LOC-LA-10:W29 (delta -775), SKU-001043@LOC-LA-10:W30 (delta -775), SKU-001043@LOC-LA-10:W31 (delta -775), SKU-001043@LOC-LA-10:W32 (delta -775), SKU-001043@LOC-LA-10:W33 (delta -775), SKU-001043@LOC-LA-10:W34 (delta -775), SKU-001043@LOC-LA-10:W35 (delta -775), SKU-001043@LOC-LA-10:W36 (delta -775), SKU-001043@LOC-LA-10:W37 (delta -775), SKU-001043@LOC-LA-10:W38 (delta -775), SKU-001043@LOC-LA-10:W39 (delta -775), SKU-001043@LOC-LA-10:W40 (delta -775), SKU-001043@LOC-LA-10:W41 (delta -775), SKU-001043@LOC-LA-10:W42 (delta -775), SKU-001043@LOC-LA-10:W43 (delta -775), SKU-001043@LOC-LA-10:W44 (delta -775), SKU-001043@LOC-LA-10:W45 (delta -775), SKU-001043@LOC-LA-10:W46 (delta -775), SKU-001043@LOC-LA-10:W47 (delta -775), SKU-001043@LOC-LA-10:W48 (delta -775), SKU-001043@LOC-LA-10:W49 (delta -775), SKU-001043@LOC-LA-10:W50 (delta -775), SKU-001043@LOC-LA-10:W51 (delta -775), SKU-001043@LOC-LA-10:W52 (delta -775), SKU-001323@LOC-EU-08:W05 (delta -279), SKU-001323@LOC-EU-08:W06 (delta -279), SKU-001323@LOC-EU-08:W07 (delta -279), SKU-001323@LOC-EU-08:W08 (delta -279), SKU-001323@LOC-EU-08:W09 (delta -279), SKU-001323@LOC-EU-08:W10 (delta -279), SKU-001323@LOC-EU-08:W11 (delta -279), SKU-001323@LOC-EU-08:W12 (delta -279), SKU-001323@LOC-EU-08:W13 (delta -279), SKU-001323@LOC-EU-08:W14 (delta -279), SKU-001323@LOC-EU-08:W15 (delta -279), SKU-001323@LOC-EU-08:W16 (delta -279), SKU-001323@LOC-EU-08:W17 (delta -279), SKU-001323@LOC-EU-08:W18 (delta -279), SKU-001323@LOC-EU-08:W19 (delta -279), SKU-001323@LOC-EU-08:W20 (delta -279), SKU-001323@LOC-EU-08:W21 (delta -279), SKU-001323@LOC-EU-08:W22 (delta -279), SKU-001323@LOC-EU-08:W23 (delta -279), SKU-001323@LOC-EU-08:W24 (delta -279), SKU-001323@LOC-EU-08:W25 (delta -279), SKU-001323@LOC-EU-08:W26 (delta -279), SKU-001323@LOC-EU-08:W27 (delta -279), SKU-001323@LOC-EU-08:W28 (delta -279), SKU-001323@LOC-EU-08:W29 (delta -279), SKU-001323@LOC-EU-08:W30 (delta -279), SKU-001323@LOC-EU-08:W31 (delta -279), SKU-001323@LOC-EU-08:W32 (delta -279), SKU-001323@LOC-EU-08:W33 (delta -279), SKU-001323@LOC-EU-08:W34 (delta -279), SKU-001323@LOC-EU-08:W35 (delta -279), SKU-001323@LOC-EU-08:W36 (delta -279), SKU-001323@LOC-EU-08:W37 (delta -279), SKU-001323@LOC-EU-08:W38 (delta -279), SKU-001323@LOC-EU-08:W39 (delta -279), SKU-001323@LOC-EU-08:W40 (delta -279), SKU-001323@LOC-EU-08:W41 (delta -279), SKU-001323@LOC-EU-08:W42 (delta -279), SKU-001323@LOC-EU-08:W43 (delta -279), SKU-001323@LOC-EU-08:W44 (delta -279), SKU-001323@LOC-EU-08:W45 (delta -279), SKU-001323@LOC-EU-08:W46 (delta -279), SKU-001323@LOC-EU-08:W47 (delta -279), SKU-001323@LOC-EU-08:W48 (delta -279), SKU-001323@LOC-EU-08:W49 (delta -279), SKU-001323@LOC-EU-08:W50 (delta -279), SKU-001323@LOC-EU-08:W51 (delta -279), SKU-001323@LOC-EU-08:W52 (delta -279), SKU-001503@LOC-ME-08:W21 (delta -704), SKU-001503@LOC-ME-08:W22 (delta -704), SKU-001503@LOC-ME-08:W23 (delta -704), SKU-001503@LOC-ME-08:W24 (delta -704), SKU-001503@LOC-ME-08:W25 (delta -704), SKU-001503@LOC-ME-08:W26 (delta -704), SKU-001503@LOC-ME-08:W27 (delta -704), SKU-001503@LOC-ME-08:W28 (delta -704), SKU-001503@LOC-ME-08:W29 (delta -704), SKU-001503@LOC-ME-08:W30 (delta -704), SKU-001503@LOC-ME-08:W31 (delta -704), SKU-001503@LOC-ME-08:W32 (delta -704), SKU-001503@LOC-ME-08:W33 (delta -704), SKU-001503@LOC-ME-08:W34 (delta -704), SKU-001503@LOC-ME-08:W35 (delta -704), SKU-001503@LOC-ME-08:W36 (delta -704), SKU-001503@LOC-ME-08:W37 (delta -704), SKU-001503@LOC-ME-08:W38 (delta -704), SKU-001503@LOC-ME-08:W39 (delta -704), SKU-001503@LOC-ME-08:W40 (delta -704), SKU-001503@LOC-ME-08:W41 (delta -704), SKU-001503@LOC-ME-08:W42 (delta -704), SKU-001503@LOC-ME-08:W43 (delta -704), SKU-001503@LOC-ME-08:W44 (delta -704), SKU-001503@LOC-ME-08:W45 (delta -704), SKU-001503@LOC-ME-08:W46 (delta -704), SKU-001503@LOC-ME-08:W47 (delta -704), SKU-001503@LOC-ME-08:W48 (delta -704), SKU-001503@LOC-ME-08:W49 (delta -704), SKU-001503@LOC-ME-08:W50 (delta -704), SKU-001503@LOC-ME-08:W51 (delta -704), SKU-001503@LOC-ME-08:W52 (delta -704), SKU-001624@LOC-NA-09:W40 (delta -2666), SKU-001624@LOC-NA-09:W41 (delta -2666), SKU-001624@LOC-NA-09:W42 (delta -2666), SKU-001624@LOC-NA-09:W43 (delta -2666), SKU-001624@LOC-NA-09:W44 (delta -2666), SKU-001624@LOC-NA-09:W45 (delta -2666), SKU-001624@LOC-NA-09:W46 (delta -2666), SKU-001624@LOC-NA-09:W47 (delta -2666), SKU-001624@LOC-NA-09:W48 (delta -2666), SKU-001624@LOC-NA-09:W49 (delta -2666), SKU-001624@LOC-NA-09:W50 (delta -2666), SKU-001624@LOC-NA-09:W51 (delta -2666), SKU-001624@LOC-NA-09:W52 (delta -2666), SKU-002556@LOC-AP-10:W39 (delta -3410), SKU-002556@LOC-AP-10:W40 (delta -3410), SKU-002556@LOC-AP-10:W41 (delta -3410), SKU-002556@LOC-AP-10:W42 (delta -3410), SKU-002556@LOC-AP-10:W43 (delta -3410), SKU-002556@LOC-AP-10:W44 (delta -3410), SKU-002556@LOC-AP-10:W45 (delta -3410), SKU-002556@LOC-AP-10:W46 (delta -3410), SKU-002556@LOC-AP-10:W47 (delta -3410), SKU-002556@LOC-AP-10:W48 (delta -3410), SKU-002556@LOC-AP-10:W49 (delta -3410), SKU-002556@LOC-AP-10:W50 (delta -3410), SKU-002556@LOC-AP-10:W51 (delta -3410), SKU-002556@LOC-AP-10:W52 (delta -3410)).",
+      "group": "INJECTED_ANOMALY"
+    },
+    {
+      "name": "Duplicate Records & Inbound Receipts Check",
+      "status": "FAIL",
+      "rows_checked": 327506,
+      "details": "318 anomaly flagged (0 key duplicates, 318 double-counted inbound receipt mismatch).",
+      "group": "INJECTED_ANOMALY"
+    },
+    {
+      "name": "Substitute Approval Policy Check",
+      "status": "FAIL",
+      "rows_checked": 9657,
+      "details": "8 substitute mitigation (MIT-SHORT-2026-000492-04, MIT-SHORT-2026-002359-03, MIT-SHORT-2026-002707-04, MIT-SHORT-2026-000140-04, MIT-SHORT-2026-002057-04, MIT-SHORT-2026-001693-04, MIT-SHORT-2026-002549-04, MIT-SHORT-2026-002639-04) references an unapproved substitute SKU.",
+      "group": "INJECTED_ANOMALY"
+    },
+    {
+      "name": "Supplier Weekly Capacity Check",
+      "status": "FAIL",
+      "rows_checked": 3206,
+      "details": "10 shortage allocation (SHORT-2026-000320, SHORT-2026-000816, SHORT-2026-001202, SHORT-2026-001332, SHORT-2026-002058, SHORT-2026-002302, SHORT-2026-002471, SHORT-2026-002511, SHORT-2026-002598, SHORT-2026-003096) exceeds supplier weekly capacity.",
+      "group": "INJECTED_ANOMALY"
+    },
+    {
+      "name": "Mitigation Lead Time Bounds Check",
+      "status": "PASS",
+      "rows_checked": 9296,
+      "details": "All mitigation options satisfy minimum >= 1 day transit lead time.",
+      "group": "INJECTED_ANOMALY"
+    },
+    {
+      "name": "SKU Unit of Measure Consistency Check",
+      "status": "FAIL",
+      "rows_checked": 3000,
+      "details": "10 SKU (SKU-000518, SKU-000568, SKU-001169, SKU-002050, SKU-002232, SKU-002285, SKU-002369, SKU-002496, SKU-002642, SKU-002966) uses non-base UOM while PAB buckets expect \"units\".",
+      "group": "INJECTED_ANOMALY"
+    }
+  ]
+}

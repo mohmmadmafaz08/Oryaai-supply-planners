@@ -1,0 +1,9 @@
+{
+  "evaluated_at_label": "Seed 20261022 · full",
+  "total_injected": 48,
+  "detected_count": 48,
+  "detection_recall": 1,
+  "detection_precision": 1,
+  "unexpected_failures": 0,
+  "explained_shortage_share": 1
+}

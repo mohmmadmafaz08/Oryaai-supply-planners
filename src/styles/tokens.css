@@ -1,0 +1,111 @@
+:root {
+  --bg-canvas: #f5f5f7;
+  --bg-surface: #ffffff;
+  --bg-muted: #f2f2f7;
+  --bg-subtle: #fafafa;
+  --bg-hover: #e8e8ed;
+
+  --text-primary: #1d1d1f;
+  --text-secondary: #424245;
+  --text-muted: #6e6e73;
+
+  --border-default: #d2d2d7;
+  --border-strong: #b0b0b8;
+
+  --accent: #0071e3;
+  --accent-hover: #0077ed;
+  --accent-fg: #ffffff;
+  --accent-subtle: #e8f2fd;
+
+  --status-critical: #ff3b30;
+  --status-critical-bg: #fef2f2;
+  --status-critical-border: #fecaca;
+
+  --status-warning: #ff9500;
+  --status-warning-bg: #fffbeb;
+  --status-warning-border: #fde68a;
+
+  --status-ok: #34c759;
+  --status-ok-bg: #f0fdf4;
+  --status-ok-border: #bbf7d0;
+
+  --status-info: #007aff;
+  --status-info-bg: #f0f9ff;
+  --status-info-border: #bae6fd;
+
+  --chart-grid: #e2e8f0;
+  --chart-axis: #64748b;
+  --chart-series-primary: #0071e3;
+  --chart-series-secondary: #94a3b8;
+  --chart-series-inbound: #0284c7;
+  --chart-series-demand: #d97706;
+  --chart-series-closing: #0f172a;
+  --chart-series-critical: #dc2626;
+  --cause-demand-spike: #d97706;
+  --cause-late-inbound: #0284c7;
+  --cause-supplier-capacity: #dc2626;
+  --cause-lead-time-gap: oklch(0.5 0.1 260);
+
+  --radius-sm: 8px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+
+  --font-sans: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'SF Pro Display', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --font-mono: 'SF Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+
+  --brand-from: #4c6fff;
+  --brand-to: #7b3fe4;
+  --ink: #0b0b0f;
+  --ink-fg: #f5f5f7;
+
+  --transition-fast: 150ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.dark {
+  --bg-canvas: #000000;
+  --bg-surface: #1c1c1e;
+  --bg-muted: #2c2c2e;
+  --bg-subtle: #161618;
+  --bg-hover: #3a3a3c;
+
+  --text-primary: #f5f5f7;
+  --text-secondary: #d1d1d6;
+  --text-muted: #98989d;
+
+  --border-default: #38383a;
+  --border-strong: #48484a;
+
+  --accent: #0a84ff;
+  --accent-hover: #409cff;
+  --accent-fg: oklch(0.99 0 0);
+  --accent-subtle: rgba(10,132,255,0.18);
+
+  --status-critical: #f87171;
+  --status-critical-bg: rgba(220, 38, 38, 0.14);
+  --status-critical-border: rgba(248, 113, 113, 0.32);
+
+  --status-warning: #fbbf24;
+  --status-warning-bg: rgba(217, 119, 6, 0.14);
+  --status-warning-border: rgba(251, 191, 36, 0.32);
+
+  --status-ok: #4ade80;
+  --status-ok-bg: rgba(22, 163, 74, 0.14);
+  --status-ok-border: rgba(74, 222, 128, 0.32);
+
+  --status-info: #38bdf8;
+  --status-info-bg: rgba(2, 132, 199, 0.14);
+  --status-info-border: rgba(56, 189, 248, 0.32);
+
+  --chart-grid: #1e293b;
+  --chart-axis: #94a3b8;
+  --chart-series-primary: oklch(0.72 0.12 195);
+  --chart-series-secondary: #64748b;
+  --chart-series-inbound: #38bdf8;
+  --chart-series-demand: #fbbf24;
+  --chart-series-closing: #f1f5f9;
+  --chart-series-critical: #f87171;
+  --cause-demand-spike: #fbbf24;
+  --cause-late-inbound: #38bdf8;
+  --cause-supplier-capacity: #f87171;
+  --cause-lead-time-gap: oklch(0.72 0.1 260);
+}

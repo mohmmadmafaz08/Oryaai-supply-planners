@@ -1,0 +1,41 @@
+{
+  "version": "7",
+  "dialect": "postgresql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "7",
+      "when": 1795516537454,
+      "tag": "0000_orbit_workflow",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1795517024218,
+      "tag": "0001_planner_role_rls",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1795517313519,
+      "tag": "0002_organizations_and_datasets",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "7",
+      "when": 1795518561098,
+      "tag": "0003_relational_planning_model",
+      "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "7",
+      "when": 1795520027005,
+      "tag": "0004_org_planning_overview",
+      "breakpoints": true
+    }
+  ]
+}

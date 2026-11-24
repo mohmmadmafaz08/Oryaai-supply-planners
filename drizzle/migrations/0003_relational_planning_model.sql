@@ -1,0 +1,53 @@
+CREATE TABLE public.plan_locations (org_id uuid NOT NULL REFERENCES public.organizations(id) ON DELETE CASCADE, location_id text NOT NULL CHECK (location_id ~ '^LOC-[A-Z]{2}-\d{2}$'), name text NOT NULL, region text NOT NULL, PRIMARY KEY (org_id, location_id));
+CREATE TABLE public.plan_suppliers (org_id uuid NOT NULL REFERENCES public.organizations(id) ON DELETE CASCADE, supplier_id text NOT NULL CHECK (supplier_id ~ '^SUP-\d{4}$'), name text NOT NULL, reliability_score numeric(4,2) NOT NULL CHECK (reliability_score BETWEEN 0 AND 1), capacity_per_week integer NOT NULL CHECK (capacity_per_week >= 0), PRIMARY KEY (org_id, supplier_id));
+CREATE TABLE public.plan_skus (org_id uuid NOT NULL REFERENCES public.organizations(id) ON DELETE CASCADE, sku_id text NOT NULL CHECK (sku_id ~ '^SKU-\d{6}$'), description text NOT NULL, uom text NOT NULL, PRIMARY KEY (org_id, sku_id));
+CREATE TABLE public.plan_sku_substitutes (org_id uuid NOT NULL, sku_id text NOT NULL, substitute_sku_id text NOT NULL, approved boolean NOT NULL, approved_on date, PRIMARY KEY (org_id, sku_id, substitute_sku_id),
+  FOREIGN KEY (org_id, sku_id) REFERENCES public.plan_skus(org_id, sku_id) ON DELETE CASCADE, FOREIGN KEY (org_id, substitute_sku_id) REFERENCES public.plan_skus(org_id, sku_id) ON DELETE CASCADE);
+CREATE TABLE public.plan_bom (org_id uuid NOT NULL, parent_sku_id text NOT NULL, component_sku_id text NOT NULL, qty_per_parent numeric NOT NULL CHECK (qty_per_parent > 0), uom text NOT NULL, PRIMARY KEY (org_id, parent_sku_id, component_sku_id),
+  FOREIGN KEY (org_id, parent_sku_id) REFERENCES public.plan_skus(org_id, sku_id) ON DELETE CASCADE, FOREIGN KEY (org_id, component_sku_id) REFERENCES public.plan_skus(org_id, sku_id) ON DELETE CASCADE);
+CREATE TABLE public.plan_forecast_demand (org_id uuid NOT NULL, demand_id text NOT NULL, sku_id text NOT NULL, location_id text NOT NULL, week smallint NOT NULL CHECK (week BETWEEN 1 AND 52), forecast_qty integer NOT NULL CHECK (forecast_qty >= 0), is_spike boolean NOT NULL DEFAULT false, PRIMARY KEY (org_id, demand_id), UNIQUE (org_id, sku_id, location_id, week),
+  FOREIGN KEY (org_id, sku_id) REFERENCES public.plan_skus(org_id, sku_id) ON DELETE CASCADE, FOREIGN KEY (org_id, location_id) REFERENCES public.plan_locations(org_id, location_id) ON DELETE CASCADE);
+CREATE TABLE public.plan_inventory (org_id uuid NOT NULL, inventory_id text NOT NULL, sku_id text NOT NULL, location_id text NOT NULL, on_hand_qty integer NOT NULL CHECK (on_hand_qty >= 0), as_of_date date NOT NULL, PRIMARY KEY (org_id, inventory_id),
+  FOREIGN KEY (org_id, sku_id) REFERENCES public.plan_skus(org_id, sku_id) ON DELETE CASCADE, FOREIGN KEY (org_id, location_id) REFERENCES public.plan_locations(org_id, location_id) ON DELETE CASCADE);
+CREATE TABLE public.plan_supplier_capacity (org_id uuid NOT NULL, capacity_id text NOT NULL, supplier_id text NOT NULL, sku_id text NOT NULL, capacity_per_week integer NOT NULL CHECK (capacity_per_week >= 0), min_order_qty integer NOT NULL CHECK (min_order_qty > 0), effective_from date NOT NULL, effective_to date, PRIMARY KEY (org_id, capacity_id), CHECK (effective_to IS NULL OR effective_to >= effective_from),
+  FOREIGN KEY (org_id, supplier_id) REFERENCES public.plan_suppliers(org_id, supplier_id) ON DELETE CASCADE, FOREIGN KEY (org_id, sku_id) REFERENCES public.plan_skus(org_id, sku_id) ON DELETE CASCADE);
+CREATE TABLE public.plan_lead_times (org_id uuid NOT NULL, lead_time_id text NOT NULL, supplier_id text NOT NULL, sku_id text NOT NULL, location_id text NOT NULL, lead_time_days integer NOT NULL CHECK (lead_time_days >= 0), effective_from date NOT NULL, effective_to date, PRIMARY KEY (org_id, lead_time_id),
+  FOREIGN KEY (org_id, supplier_id) REFERENCES public.plan_suppliers(org_id, supplier_id) ON DELETE CASCADE, FOREIGN KEY (org_id, sku_id) REFERENCES public.plan_skus(org_id, sku_id) ON DELETE CASCADE, FOREIGN KEY (org_id, location_id) REFERENCES public.plan_locations(org_id, location_id) ON DELETE CASCADE);
+CREATE TABLE public.plan_purchase_orders (org_id uuid NOT NULL, po_id text NOT NULL CHECK (po_id ~ '^PO-\d{4}-\d{6}$'), supplier_id text NOT NULL, sku_id text NOT NULL, location_id text NOT NULL, ordered_qty integer NOT NULL CHECK (ordered_qty > 0), uom text NOT NULL, order_date date NOT NULL, promised_date date NOT NULL, actual_receipt_date date,
+  status text NOT NULL CHECK (status IN ('DRAFT','CONFIRMED','SHIPPED','IN_TRANSIT','DELAYED','RECEIVED','CANCELLED')), transport_delay_days integer NOT NULL DEFAULT 0 CHECK (transport_delay_days >= 0), PRIMARY KEY (org_id, po_id),
+  CHECK (promised_date >= order_date), CHECK (actual_receipt_date IS NULL OR actual_receipt_date >= order_date),
+  FOREIGN KEY (org_id, supplier_id) REFERENCES public.plan_suppliers(org_id, supplier_id) ON DELETE CASCADE, FOREIGN KEY (org_id, sku_id) REFERENCES public.plan_skus(org_id, sku_id) ON DELETE CASCADE, FOREIGN KEY (org_id, location_id) REFERENCES public.plan_locations(org_id, location_id) ON DELETE CASCADE);
+CREATE TABLE public.plan_po_events (org_id uuid NOT NULL, event_id text NOT NULL, po_id text NOT NULL, from_status text, to_status text NOT NULL, occurred_on date NOT NULL, actor_role text NOT NULL, PRIMARY KEY (org_id, event_id),
+  FOREIGN KEY (org_id, po_id) REFERENCES public.plan_purchase_orders(org_id, po_id) ON DELETE CASCADE);
+CREATE TABLE public.plan_production_plans (org_id uuid NOT NULL, plan_id text NOT NULL, sku_id text NOT NULL, location_id text NOT NULL, week smallint NOT NULL CHECK (week BETWEEN 1 AND 52), planned_qty integer NOT NULL CHECK (planned_qty >= 0), capacity_qty integer NOT NULL CHECK (capacity_qty >= 0), status text NOT NULL CHECK (status IN ('PLANNED','RELEASED','COMPLETED','HOLD')), PRIMARY KEY (org_id, plan_id),
+  FOREIGN KEY (org_id, sku_id) REFERENCES public.plan_skus(org_id, sku_id) ON DELETE CASCADE, FOREIGN KEY (org_id, location_id) REFERENCES public.plan_locations(org_id, location_id) ON DELETE CASCADE);
+CREATE TABLE public.plan_shortages (org_id uuid NOT NULL, shortage_id text NOT NULL CHECK (shortage_id ~ '^SHORT-\d{4}-\d{6}$'), sku_id text NOT NULL, location_id text NOT NULL, week smallint NOT NULL CHECK (week BETWEEN 1 AND 52), shortage_qty integer NOT NULL CHECK (shortage_qty > 0),
+  cause_code text NOT NULL CHECK (cause_code IN ('DEMAND_SPIKE','LATE_INBOUND','SUPPLIER_CAPACITY','LEAD_TIME_GAP')), priority_score numeric(6,2) NOT NULL CHECK (priority_score BETWEEN 0 AND 100), priority_components jsonb NOT NULL, lead_time_basis_days integer NOT NULL,
+  status text NOT NULL CHECK (status IN ('OPEN','MITIGATING','RESOLVED')), demand_id text NOT NULL, supplier_id text NOT NULL, PRIMARY KEY (org_id, shortage_id),
+  FOREIGN KEY (org_id, sku_id) REFERENCES public.plan_skus(org_id, sku_id) ON DELETE CASCADE, FOREIGN KEY (org_id, location_id) REFERENCES public.plan_locations(org_id, location_id) ON DELETE CASCADE,
+  FOREIGN KEY (org_id, demand_id) REFERENCES public.plan_forecast_demand(org_id, demand_id) ON DELETE CASCADE, FOREIGN KEY (org_id, supplier_id) REFERENCES public.plan_suppliers(org_id, supplier_id) ON DELETE CASCADE);
+CREATE TABLE public.plan_shortage_po_refs (org_id uuid NOT NULL, shortage_id text NOT NULL, po_id text NOT NULL, PRIMARY KEY (org_id, shortage_id, po_id),
+  FOREIGN KEY (org_id, shortage_id) REFERENCES public.plan_shortages(org_id, shortage_id) ON DELETE CASCADE, FOREIGN KEY (org_id, po_id) REFERENCES public.plan_purchase_orders(org_id, po_id) ON DELETE CASCADE);
+CREATE TABLE public.plan_shortage_events (org_id uuid NOT NULL, event_id text NOT NULL, shortage_id text NOT NULL, from_status text, to_status text NOT NULL, occurred_on date NOT NULL, actor_role text NOT NULL, PRIMARY KEY (org_id, event_id),
+  FOREIGN KEY (org_id, shortage_id) REFERENCES public.plan_shortages(org_id, shortage_id) ON DELETE CASCADE);
+CREATE TABLE public.plan_mitigation_options (org_id uuid NOT NULL, mitigation_id text NOT NULL CHECK (mitigation_id ~ '^MIT-SHORT-\d{4}-\d{6}-\d{2}$'), shortage_id text NOT NULL, type text NOT NULL CHECK (type IN ('EXPEDITE','ALT_SUPPLIER','SUBSTITUTE','TRANSFER')), cost_usd numeric(14,2) NOT NULL CHECK (cost_usd >= 0), lead_time_days integer NOT NULL CHECK (lead_time_days >= 0),
+  recovered_units integer NOT NULL CHECK (recovered_units >= 0), service_level_after numeric(6,4) NOT NULL CHECK (service_level_after BETWEEN 0 AND 1), policy_compliant boolean NOT NULL, policy_notes text NOT NULL DEFAULT '', PRIMARY KEY (org_id, mitigation_id),
+  FOREIGN KEY (org_id, shortage_id) REFERENCES public.plan_shortages(org_id, shortage_id) ON DELETE CASCADE);
+CREATE TABLE public.plan_ground_truth (org_id uuid NOT NULL REFERENCES public.organizations(id) ON DELETE CASCADE, issue_type text NOT NULL CHECK (issue_type IN ('DOUBLE_COUNTED_INBOUND','UNAPPROVED_SUBSTITUTE','CAPACITY_EXCEEDED','NO_LEAD_TIME','UOM_MISMATCH')), record_ref text NOT NULL, expected_detection text NOT NULL, PRIMARY KEY (org_id, issue_type, record_ref));
+CREATE TABLE public.plan_generation_runs (id uuid PRIMARY KEY DEFAULT gen_random_uuid(), org_id uuid NOT NULL REFERENCES public.organizations(id) ON DELETE CASCADE, seed integer NOT NULL, scale text NOT NULL, row_counts jsonb NOT NULL, checksums jsonb NOT NULL, detection jsonb NOT NULL, created_by uuid NOT NULL, created_at timestamptz NOT NULL DEFAULT now());
+CREATE INDEX ON public.plan_generation_runs (org_id, created_at DESC);
+CREATE INDEX ON public.plan_shortages (org_id, priority_score DESC);
+CREATE INDEX ON public.plan_purchase_orders (org_id, sku_id, location_id);
+
+DO $$
+DECLARE t text;
+BEGIN
+  FOREACH t IN ARRAY ARRAY['plan_locations','plan_suppliers','plan_skus','plan_sku_substitutes','plan_bom','plan_forecast_demand','plan_inventory','plan_supplier_capacity','plan_lead_times','plan_purchase_orders','plan_po_events','plan_production_plans','plan_shortages','plan_shortage_po_refs','plan_shortage_events','plan_mitigation_options','plan_ground_truth','plan_generation_runs'] LOOP
+    EXECUTE format('GRANT SELECT, INSERT, DELETE ON public.%I TO authenticated', t);
+    EXECUTE format('GRANT ALL ON public.%I TO service_role', t);
+    EXECUTE format('ALTER TABLE public.%I ENABLE ROW LEVEL SECURITY', t);
+    EXECUTE format('CREATE POLICY "members read" ON public.%I FOR SELECT TO authenticated USING (public.is_org_member(org_id, auth.uid()))', t);
+    EXECUTE format('CREATE POLICY "owners insert" ON public.%I FOR INSERT TO authenticated WITH CHECK (public.is_org_owner(org_id, auth.uid()))', t);
+    EXECUTE format('CREATE POLICY "owners delete" ON public.%I FOR DELETE TO authenticated USING (public.is_org_owner(org_id, auth.uid()))', t);
+  END LOOP;
+END $$;

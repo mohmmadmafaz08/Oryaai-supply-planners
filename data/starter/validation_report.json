@@ -1,0 +1,95 @@
+{
+  "checks": [
+    {
+      "name": "PK Uniqueness",
+      "status": "PASS",
+      "rows_checked": 1262,
+      "details": "All primary keys across SKUs, locations, suppliers, shortages, mitigations, and POs are unique.",
+      "group": "CLEAN_BASELINE"
+    },
+    {
+      "name": "FK Integrity",
+      "status": "PASS",
+      "rows_checked": 8028,
+      "details": "All SKU, location, supplier, shortage, and purchase order foreign keys resolve cleanly.",
+      "group": "CLEAN_BASELINE"
+    },
+    {
+      "name": "Allowed Enums",
+      "status": "PASS",
+      "rows_checked": 1164,
+      "details": "All cause codes, statuses, and mitigation types belong to permitted schema enums.",
+      "group": "CLEAN_BASELINE"
+    },
+    {
+      "name": "Date Ordering",
+      "status": "PASS",
+      "rows_checked": 498,
+      "details": "All purchase orders satisfy order_date <= promised_date and receipt >= order_date.",
+      "group": "CLEAN_BASELINE"
+    },
+    {
+      "name": "Lifecycle Transitions",
+      "status": "PASS",
+      "rows_checked": 1445,
+      "details": "All PO and shortage status events follow valid state-machine transitions.",
+      "group": "CLEAN_BASELINE"
+    },
+    {
+      "name": "ID Patterns",
+      "status": "PASS",
+      "rows_checked": 1262,
+      "details": "All entity identifiers match required canonical regex formats.",
+      "group": "CLEAN_BASELINE"
+    },
+    {
+      "name": "Shortage Lead-Time Basis",
+      "status": "FAIL",
+      "rows_checked": 174,
+      "details": "2 shortages lack a positive lead-time basis.",
+      "group": "CLEAN_BASELINE"
+    },
+    {
+      "name": "PAB Weekly Reconciliation Check",
+      "status": "FAIL",
+      "rows_checked": 6864,
+      "details": "26 row failed closing balance arithmetic (SKU-000014@LOC-AP-01:W40 (delta -289), SKU-000014@LOC-AP-01:W41 (delta -289), SKU-000014@LOC-AP-01:W42 (delta -289), SKU-000014@LOC-AP-01:W43 (delta -289), SKU-000014@LOC-AP-01:W44 (delta -289), SKU-000014@LOC-AP-01:W45 (delta -289), SKU-000014@LOC-AP-01:W46 (delta -289), SKU-000014@LOC-AP-01:W47 (delta -289), SKU-000014@LOC-AP-01:W48 (delta -289), SKU-000014@LOC-AP-01:W49 (delta -289), SKU-000014@LOC-AP-01:W50 (delta -289), SKU-000014@LOC-AP-01:W51 (delta -289), SKU-000014@LOC-AP-01:W52 (delta -289), SKU-000049@LOC-NA-01:W40 (delta -663), SKU-000049@LOC-NA-01:W41 (delta -663), SKU-000049@LOC-NA-01:W42 (delta -663), SKU-000049@LOC-NA-01:W43 (delta -663), SKU-000049@LOC-NA-01:W44 (delta -663), SKU-000049@LOC-NA-01:W45 (delta -663), SKU-000049@LOC-NA-01:W46 (delta -663), SKU-000049@LOC-NA-01:W47 (delta -663), SKU-000049@LOC-NA-01:W48 (delta -663), SKU-000049@LOC-NA-01:W49 (delta -663), SKU-000049@LOC-NA-01:W50 (delta -663), SKU-000049@LOC-NA-01:W51 (delta -663), SKU-000049@LOC-NA-01:W52 (delta -663)).",
+      "group": "INJECTED_ANOMALY"
+    },
+    {
+      "name": "Duplicate Records & Inbound Receipts Check",
+      "status": "FAIL",
+      "rows_checked": 7362,
+      "details": "26 anomaly flagged (0 key duplicates, 26 double-counted inbound receipt mismatch).",
+      "group": "INJECTED_ANOMALY"
+    },
+    {
+      "name": "Substitute Approval Policy Check",
+      "status": "FAIL",
+      "rows_checked": 497,
+      "details": "2 substitute mitigation (MIT-SHORT-2026-000018-04, MIT-SHORT-2026-000123-03) references an unapproved substitute SKU.",
+      "group": "INJECTED_ANOMALY"
+    },
+    {
+      "name": "Supplier Weekly Capacity Check",
+      "status": "FAIL",
+      "rows_checked": 174,
+      "details": "2 shortage allocation (SHORT-2026-000033, SHORT-2026-000109) exceeds supplier weekly capacity.",
+      "group": "INJECTED_ANOMALY"
+    },
+    {
+      "name": "Mitigation Lead Time Bounds Check",
+      "status": "PASS",
+      "rows_checked": 492,
+      "details": "All mitigation options satisfy minimum >= 1 day transit lead time.",
+      "group": "INJECTED_ANOMALY"
+    },
+    {
+      "name": "SKU Unit of Measure Consistency Check",
+      "status": "FAIL",
+      "rows_checked": 60,
+      "details": "2 SKU (SKU-000009, SKU-000052) uses non-base UOM while PAB buckets expect \"units\".",
+      "group": "INJECTED_ANOMALY"
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+issue_type,record_ref,expected_detection
+DOUBLE_COUNTED_INBOUND,SKU-000014@LOC-AP-01:W40,PAB Weekly Reconciliation Check
+DOUBLE_COUNTED_INBOUND,SKU-000049@LOC-NA-01:W40,PAB Weekly Reconciliation Check
+UNAPPROVED_SUBSTITUTE,MIT-SHORT-2026-000018-04,Substitute Approval Policy Check
+UNAPPROVED_SUBSTITUTE,MIT-SHORT-2026-000123-03,Substitute Approval Policy Check
+CAPACITY_EXCEEDED,SHORT-2026-000033,Supplier Weekly Capacity Check
+CAPACITY_EXCEEDED,SHORT-2026-000109,Supplier Weekly Capacity Check
+NO_LEAD_TIME,SHORT-2026-000032,Shortage Lead-Time Basis
+NO_LEAD_TIME,SHORT-2026-000040,Shortage Lead-Time Basis
+UOM_MISMATCH,SKU-000052,SKU Unit of Measure Consistency Check
+UOM_MISMATCH,SKU-000009,SKU Unit of Measure Consistency Check
