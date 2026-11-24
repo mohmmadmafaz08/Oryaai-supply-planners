@@ -23,14 +23,14 @@ Network-wide risk indicators, weekly shortage trends, root-cause breakdown and p
 
 <table>
 <tr><td width="50%"><b>Projected Available Balance</b></td><td width="50%"><b>What-if Scenario Simulator</b></td></tr>
-<tr><td><a href="docs/screenshots/projected-balance.png"><img src="docs/screenshots/projected-balance.png" alt="Weekly projected balance and reconciliation" width="100%"></a></td><td><a href="docs/screenshots/scenario-simulator.png"><img src="docs/screenshots/scenario-simulator.png" alt="Scenario parameters and baseline comparison" width="100%"></a></td></tr>
+<tr><td><a href="docs/screenshots/project-balanced.png"><img src="docs/screenshots/project-balanced.png" alt="Weekly projected balance and reconciliation" width="100%"></a></td><td><a href="docs/screenshots/simulator.png"><img src="docs/screenshots/simulator.png" alt="Scenario parameters and baseline comparison" width="100%"></a></td></tr>
 <tr><td>Weekly inventory projections and arithmetic reconciliation.</td><td>Demand, inbound delays, capacity and mitigation comparisons.</td></tr>
 </table>
 
 <details>
 <summary><b>Supplier Capacity &amp; Risk — view screenshot</b></summary>
 
-![Supplier Capacity](docs/screenshots/suppliers.png)
+![Supplier Capacity](docs/screenshots/supliers.png)
 
 Weekly capacity, peak allocation, utilization, reliability, minimum order quantities and lead times.
 
@@ -274,7 +274,10 @@ Run these commands in your environment to verify the current checkout. A product
 ├── data/starter/            # Starter exports
 ├── data/full/               # Full-scale exports and evidence
 ├── public/data/             # Bundled application data
-├── docs/                   # Data dictionary and provenance
+├── docs/
+│   ├── screenshots/        # Product screenshots
+│   ├── DATA_DICTIONARY.md
+│   └── SOURCE_MANIFEST.md
 └── supabase/schema.sql      # Application database schema
 ```
 
