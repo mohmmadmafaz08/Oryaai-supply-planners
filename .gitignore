@@ -41,3 +41,6 @@ data/full/*.json
 data/full/seed.sql
 data/full/csv/forecast_demand.csv
 data/full/csv/pab_weekly.csv
+
+
+.env
